@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gap</title>
+    <title>Funciones</title>
     <style>
         body {
           font-family: Arial;
@@ -14,18 +14,23 @@
           /* grid-template-columns: 25% 200px 25%; */
           /* grid-template-rows: 300px 300px; */
           /* grid-template: filas / columnas; */
-          grid-template: 300px 100px 100px / 50% 200px 100px; 
+          /* grid-template: 300px 100px 100px / 1fr 1fr 1fr;  */
+          /* grid-template: 300px 100px 100px / repeat(4, 1fr);  */
+          /* grid-template: 300px 100px 100px / repeat(4, minmax(200px,1fr));  */
+          grid-template: 300px 100px 100px / minmax(200px,1fr) 1fr 1fr 1fr;
+          /* Con la función minmax() reemplazamos al antiguo max-width y al min-width  */
           grid-column-gap: 30px;
           grid-row-gap: 50px;
           /* grid-gap: filas columnas; */
-          grid-gap: 10px 100px;
+          grid-gap: 10px;
+          /* Con un solo valor en grid-gap le decimos que lo implemente para filas y columnas por igual */
         }
         .item {
           background: lightblue;
           padding: 10px;
           border: 1px solid red;
 
-          /* Esta sería una forma de darles márgenes a las cajas, pero no conviene */
+          /* Esta sería, anteriormente, una forma de darles márgenes a las cajas, pero ya no conviene */
           /* margin-right: 10px; */
           /* margin-bottom: 10px; */
         }
