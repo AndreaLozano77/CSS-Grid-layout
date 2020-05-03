@@ -3,58 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombrando líneas</title>
+    <title>creando la cuadrícula</title>
     <style>
         body {
           font-family: Arial;
         }
         .container {
           display: grid;
-          grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [linea4] 1fr [linea5] 1fr [linea6] 1fr [linea7] 1fr [linea8] 1fr [final];
-          grid-template-rows: [inicio] 250px [linea2] 150px [final];
-          grid-gap: 5px;
+          grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: minmax(100px);
+          grid-gap: 10px;
           height: 100vh;
         }
-        .item {
+        div {
           background: lightblue;
           padding: 10px;
           border: 1px solid red;
         }
-        .item:nth-of-type(1) {
-          /* background: blue;
-          grid-column-start: 1; 
-          grid-column-end: 3;  */
-
-          grid-column: linea5 / final ;
-          grid-row: inicio / final ;
+        .nested {
+          background: burlywood;
         }
-        .item:nth-of-type(2){
-          grid-column: linea3 / linea5; 
-          grid-row: inicio / final ;
-
-          /* grid-row: 1 / span 2; */
+        .item1 {
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+          grid-column-start: 1;
+          grid-column-end: 4;
+          grid-row-start: 1;
+          grid-row-end: 3;
+          z-index: 2;
         }
-        .item:nth-of-type(3){
-          grid-column: inicio / linea3 ;
-          grid-row: inicio / linea2;
+        .item2 {
+          grid-column-start: 1;
+          /* grid-column-end: ; */
+          grid-row-start: 2;
+          grid-row-end: 4;
+          z-index: 1;
+    
         }
-        .item:nth-of-type(4){
-          grid-column: inicio / linea2;
-          grid-row: linea2 / final;
-        }
-        .item:nth-of-type(5){
-          grid-column: linea2 / linea3;
-          grid-row: linea2 / final;
+        /*.item3 {
+           grid-column-start: ;
+          grid-column-end: ;
+          grid-row-start: ;
+          grid-row-end: ; 
+          
+        }*/
+        /*.item4 {
+           grid-column-start: ;
+          grid-column-end: ;
+          grid-row-start: ;
+          grid-row-end: ; 
+          
+        }*/
+        .item5 {
+         
         }
       </style>
 </head>
 <body>
     <section class="container">
-        <div class="item">item #1</div>
-        <div class="item">item #2</div>
-        <div class="item">item #3</div>
-        <div class="item">item #4</div>
-        <div class="item">item #5</div>
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
     </section>
 </body>
 </html>
