@@ -10,8 +10,8 @@
         }
         .container {
           display: grid;
-          grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [linea4] 1fr [linea5] 1fr [linea6] 1fr [linea7] [final];
-          grid-template-rows: [inicio] 1fr [linea2] 1fr [linea3] 1fr [linea4] 1fr [linea5] 1fr [linea6] 1fr [linea7] [final];
+          grid-template-columns: [inicio] 300px [linea2] 200px [linea3] 200px [final];
+          grid-template-rows: [inicio] 100px [linea2] 200px [final];
           grid-gap: 5px;
           height: 100vh;
         }
@@ -29,8 +29,8 @@
           grid-row: ; */
         }
         .item:nth-of-type(2){
-          /* grid-column: ; 
-          grid-row: ; */
+          /* grid-column: linea2 / final ; 
+          grid-row: linea2 / final ; */
 
           /* grid-row: 1 / span 2; */
         }
