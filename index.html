@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Definiendo el nombre de lineas</title>
+    <title>Nombrando líneas</title>
     <style>
         body {
           font-family: Arial;
         }
         .container {
           display: grid;
-          grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [destacado-end] 1fr [linea5] 1fr [destacado2-end] 1fr [linea7] 1fr [final];
-          grid-template-rows: [inicio] 200px [linea2] 200px [final];
+          grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [linea4] 1fr [linea5] 1fr [linea6] 1fr [linea7] [final];
+          grid-template-rows: [inicio] 1fr [linea2] 1fr [linea3] 1fr [linea4] 1fr [linea5] 1fr [linea6] 1fr [linea7] [final];
           grid-gap: 5px;
           height: 100vh;
         }
@@ -24,16 +24,23 @@
           /* background: blue;
           grid-column-start: 1; 
           grid-column-end: 3;  */
-          grid-column: inicio / destacado-end;
-          grid-row: inicio / final;
+
+          /* grid-column: ;
+          grid-row: ; */
         }
         .item:nth-of-type(2){
-          grid-column: destacado-end / destacado2-end; 
-          grid-row: inicio / final;
+          /* grid-column: ; 
+          grid-row: ; */
+
           /* grid-row: 1 / span 2; */
         }
         .item:nth-of-type(3){
-          grid-column: destacado2-end / final;
+          /* grid-column: ;
+          grid-row: ; */
+        }
+        .item:nth-of-type(4){
+          /* grid-column: linea4f/ final;
+          grid-row: linea3c / linea5c; */
         }
       </style>
 </head>
@@ -44,6 +51,8 @@
         <div class="item">item #3</div>
         <div class="item">item #4</div>
         <div class="item">item #5</div>
+        <div class="item">item #6</div>
+      
 
       </section>
 </body>
