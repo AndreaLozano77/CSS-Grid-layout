@@ -27,7 +27,6 @@
           /* margin-bottom: 10px; */
         }
         .item:nth-of-type(4){
-          background: blue;
           overflow: auto;
           /* display: subgrid; */
           display: grid;
@@ -38,24 +37,40 @@
         }
         .header{
           grid-area: header;
+          border-radius: 15px;
+          background: #5296ce;
+          color: white;
+          text-align: center;
         }
         .left {
-          grid-area: left;
+          grid-area: left; 
+          border-radius: 30px;
+          background: #e75c29;
+          color: white;
+          text-align: center;
         }
         .contenido{
           grid-area: contenido;
+          border-radius: 35px;
+          background: #9c9c9c;
+          color: white;
+          text-align: center;
         }
         .footer {
           grid-area: footer;
+          border-radius: 15px;
+          background: #3a9b3a;
+          color: white;
+          text-align: center;
         }
       </style>
 </head>
 <body>
     <section class="container">
-        <div class="item header">header</div>
-        <div class="item left">left</div>
-        <div class="item contenido">contenido</div>
-        <div class="item footer">footer</div>
+        <div class="item header">Header</div>
+        <div class="item left">Left Navigation</div>
+        <div class="item contenido">Contenido</div>
+        <div class="item footer">Footer</div>
       </section>
 </body>
 </html>
