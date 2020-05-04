@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alineación de contenido</title>
+    <title>Alineación de filas y columnas</title>
     <style>
         body {
           font-family: Arial;
@@ -12,13 +12,16 @@
           display: grid;
           grid-gap: 5px;
           height: 100vh;
-          grid-template-columns: repeat(3,1fr);
-          grid-template-rows: repeat(4,1fr);
+          grid-template-columns: repeat(3,200px);
+          grid-template-rows: repeat(4,100px);
+
+          justify-content:center;
+          align-content: end;
 
           /* justify-items: start end center stretch; */
-          justify-items: center;
+          /* justify-items: center; */
           /* align-items: start end center stretch; */
-          align-items: center;
+          /* align-items: center; */
 
         }
         .item {
@@ -27,8 +30,8 @@
           border: 1px solid red;
         }
         .item:nth-of-type(5){
-          justify-self: start;
-          align-self: start;
+          /* justify-self: start;
+          align-self: start; */
         }
         
       </style>
